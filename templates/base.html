@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<link href={{url_for('static', filename='css/style.css')}} rel="stylesheet">
+</head>
+	<header>
+	<ul class="header-menu">
+		<li class="header-element"><a href="/about/">О сайте</a></li>
+		<li class="header-element"><a href="/rules/">Правила игры</a></li>
+		<li class="header-element"><a href="/maps/">Карты</a></li>
+		<li class="header-element"><a href="/turns/">Ходы</a></li>
+		<li class="header-element"><a href="/tables/">Таблички</a></li>
+		<li class="header-element"><a href="/players/">Игроки</a></li>
+	</ul>
+	</header>
+	{% block content %}
+	{% endblock %}
+</html>

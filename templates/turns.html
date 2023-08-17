@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Карта ходов {% endblock %}
+{% block content %}
+<h1>Карта ходов</h1>
+<h2>Ход {{number}}</h2>
+<img
+  class="turn-picture"
+  src={{url_for('static', filename='images/turns/turn_')}}{{number+'.png'}}
+  alt="Картинка хода"/>
+{% for turn in turns_list %}
+<div><a href={{url_for('turns') + 'turn_'+turn[-6:-4]}}>{{turn}}</a></div>
+{% endfor %}
+
+
+
+</tabl>
+{% endblock %}

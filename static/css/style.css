@@ -1,0 +1,30 @@
+.header-menu{
+	background-color: D5C218;
+	height: 10vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+	font-family: "Gill Sans", sans-serif;
+	font-weight: 300;
+	
+}
+.header-element{
+	list-style-position: initial;
+    list-style-image: initial;
+    list-style-type: none;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+	
+}
+.header-element a{
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
