@@ -38,5 +38,7 @@ def tables():
 @app.route("/about/")
 def about():
     return render_template("about.html")
-app.run(debug = True)
+
+if __name__ == '__main__':
+    app.run()
 
