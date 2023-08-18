@@ -1,6 +1,6 @@
-Города=cities.png
-Климат=climate.png
-Этносы=ethic.png
-Игроки=players.png
-Религии=religion.png
-Ресурсы=resources.png
+Goroda=cities.png
+Klimat=climate.png
+Etnosy=ethic.png
+Igroki=players.png
+Religii=religion.png
+Resursy=resources.png
