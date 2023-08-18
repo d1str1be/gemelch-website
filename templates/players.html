@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<p>players</p>
+{% for line in players_list %}
+<p> {{line}}
+{% endfor %}
 {% endblock %}

@@ -1,4 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-<p>tables
+<ul class="tables-list">
+{% for table_name in tables_names %}
+<li class="tables-element">
+  <form action={{url_for('tables') + table_name}}>
+      <input type="submit" value={{table_name}} />
+  </form>
+</li>
+{% endfor %}
+</ul>
+{% if table_image_name %}
+<img
+  class="table-picture"
+  src={{url_for('static', filename='images/tables/')}}{{table_image_name}}
+  alt="Табличка"/>
+{% endif %}
 {% endblock %}

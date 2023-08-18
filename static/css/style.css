@@ -28,3 +28,10 @@
 	color: black;
 	font-weight: bold;
 }
+.tables-list, .maps-list{
+	display: flex;
+	flex-wrap: wrap;	
+}
+.tables-element, .maps-element{
+	list-style-type: none;
+}

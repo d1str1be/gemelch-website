@@ -1,0 +1,15 @@
+Постройки=buildings.png
+Традиции=cult_tradition.png
+Этносы=etnosy.png
+Формы_правления=FP2.jpg
+Священные_места=holy_places.jpg
+Перки_правителя=perki_praviteley.png
+Приоритеты_развития=prioritety_razvitia.png
+Религии=religion.png
+Размер=size.jpg
+Советники=sovetniki.png
+Тактики=tactics.jpg
+Технологии=tech.png
+Товары=tovaryOLD.png
+Уникальные_постройки=unik_postroyki.png
+Погода=weather.jpg

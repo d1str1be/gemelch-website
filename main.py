@@ -3,12 +3,24 @@ import tools
 app = Flask("gemelch-website")
 
 @app.route("/")
-def base():
-    return render_template("base.html")
+@app.route("/about/")
+def about():
+    return render_template("about.html")
     
 @app.route("/maps/")
-def maps():
-    return render_template("maps.html")
+@app.route("/maps/<map_name>")
+def maps(map_name=None):
+    print(map_name)
+    maps_names, maps_images = tools.get_maps_files_list()
+    if map_name is not None:
+        maps = dict()
+        for i in range(len(maps_names)):
+            print(len(maps_names))
+            print(i, maps_names[i], maps_images[i])
+            maps[maps_names[i]] = maps_images[i]
+        return render_template("maps.html", map_name = map_name, 
+        maps_names = maps_names, map_image_name = maps[map_name])
+    return render_template("maps.html", maps_names = maps_names)
     
 @app.route("/rules/")
 def rules():
@@ -28,17 +40,24 @@ def turns(turn_number=None):
     
 @app.route("/players/")
 def players():
-    return render_template("players.html")
+    players_list = tools.get_players_list()
+    return render_template("players.html", players_list = players_list)
 
 @app.route("/tables/")
-def tables():
-    tables_list = tools.get_tables_files_list()
-    return render_template("tables.html")
-    
-@app.route("/about/")
-def about():
-    return render_template("about.html")
+@app.route("/tables/<table_name>")
+def tables(table_name=None):
+    print(table_name)
+    tables_names, tables_images = tools.get_tables_files_list()
+    if table_name is not None:
+        tables = dict()
+        print(len(tables_names))
+        for i in range(len(tables_names)):
+            print(i, tables_names[i], tables_images[i])
+            tables[tables_names[i]] = tables_images[i]
+        return render_template("tables.html", tables_names = tables_names, 
+        tables_images = tables_names, table_image_name = tables[table_name])
+    return render_template("tables.html", tables_names = tables_names, tables_images = tables_names)
+   
 
 if __name__ == '__main__':
-    app.run()
-
+    app.run(debug = True)

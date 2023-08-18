@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-{{ super() }}
-<p>maps</p>
-
+<ul class="maps-list">
+{% for map_name in maps_names %}
+<li class="maps-element">
+  <form action={{url_for('maps') + map_name}}>
+      <input type="submit" value={{map_name}} />
+  </form>
+</li>
+{% endfor %}
+</ul>
+{% if map_name %}
+<img
+  class="map-picture"
+  src={{url_for('static', filename='images/maps/')}}{{map_image_name}}
+  alt="Карта "{{map_name}}/>
+{% endif %}
 {% endblock %}
