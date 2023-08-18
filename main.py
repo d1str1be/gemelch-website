@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 import tools
-app = Flask("hegemony-website")
+app = Flask("gemelch-website")
 
 @app.route("/")
 def base():
